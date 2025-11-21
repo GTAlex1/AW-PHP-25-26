@@ -1,5 +1,3 @@
-Actividad 3: Variables personales
-Declara tres variables con tu nombre, edad y ciudad, y muestra una frase combinando texto y variables.
 <?php
 $nombre = "Alejandro Fernández López-Cepero";
 $edad = 17;
