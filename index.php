@@ -46,11 +46,11 @@ usort($archivos, function($a, $b) {
     <?php foreach ($archivos as $archivo): ?>
         <?php
             // Sacamos solo el número: "a3.php" → 3
-            $num = in
-tval(substr($archivo, 1, -4));
+            $num = intval(substr($archivo, 1));
         ?>
-        <li><a href="<?php echo htmlspecialchars($archivo); ?>">Actividad <?php echo $num; ?></a></li>
+        <li><a href="<?= $archivo ?>">Actividad <?= $num ?></a></li>
     <?php endforeach; ?>
 </ul>
+
 </body>
-</html> 
+</html>
