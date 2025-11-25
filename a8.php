@@ -15,9 +15,9 @@
             $color = "yellow";
         }else if ($nota <=8) {
             $color = "green";
-        }else {
-        } $color = "blue"
+        }else { $color = "blue";
+        } 
     ?>
-
+    <h1 style="color: <?php echo $color; ?>">Tu nota es: <?php echo $nota; ?></h1>
 </body>
 </html>
