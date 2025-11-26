@@ -5,7 +5,7 @@ $alumnos = [
     "Lucía" => 9.4,
     "Pedro" => 5.8,
     "Ana"   => 7.9,
-    "Jorge" => 8.1
+    "Jorge" => 10.1
 ];
 
 $mejorAlumno = "";
