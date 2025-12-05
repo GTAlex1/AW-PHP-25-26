@@ -1,7 +1,7 @@
 <?php
     declare(strict_types=1);
 
-    $miPerfil[
+    $miPerfil = [
         "nombre" => "Kazus",
         "edad" => "17",
         "juego" => ["Honkai: Star Rail", "Colorful Stage"],
