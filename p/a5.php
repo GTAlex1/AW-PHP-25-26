@@ -12,7 +12,7 @@ $miPerfil = [
 
 /* Foreach */
 foreach ($miPerfil as $clave => $valor) {
-    echo "$clave: $valor" . PHP_EOL;
+    echo "$clave: $valor" . PHP_EOL . <br>;
 }
 
 ?>
