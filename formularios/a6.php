@@ -1,13 +1,13 @@
 <?php
-$visitas = isset($_COOKIE['visitas']) ? $_COOKIE['visitas'] : 0;
-
-if (isset($_POST['contar'])) {
-    $visitas++;
-    setcookie('visitas', $visitas, time() + 3600 * 24); // Expira en 1 día
-    header("Refresh:0"); // Recarga para ver el cambio
+$v = isset($_COOKIE['v']) ? $_COOKIE['v'] : 0;
+if (isset($_POST['c'])) {
+    $v++;
+    setcookie('v', $v, time() + 86400);
+    header("Location: actividad6.php");
+    exit;
 }
 ?>
 <form method="post">
-    <button type="submit" name="contar">Contar Visita</button>
+    <button type="submit" name="c">Contar visitas</button>
 </form>
-<p>Número de visitas: <?php echo $visitas; ?></p>
+<p>Visitas: <?php echo $v; ?></p>

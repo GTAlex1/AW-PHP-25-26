@@ -1,23 +1,19 @@
 <form method="post">
-    Número: <input type="number" name="num" required>
-    Tope: <input type="number" name="tope" required>
-    Color texto: <select name="color">
-        <option value="blue">Azul</option>
+    Número: <input type="number" name="n">
+    Tope: <input type="number" name="t">
+    Color: <select name="c">
+        <option value="black">Negro</option>
         <option value="red">Rojo</option>
-        <option value="purple">Púrpura</option>
-        <option value="orange">Naranja</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
     </select>
-    <button type="submit">Generar Tabla</button>
+    <button type="submit">Generar</button>
 </form>
-
 <?php
 if ($_POST) {
-    $n = $_POST['num'];
-    $t = $_POST['tope'];
-    $c = $_POST['color'];
-    echo "<table border='1' style='color:$c;'>";
-    for ($i = 0; $i <= $t; $i++) {
-        echo "<tr><td>$n x $i = " . ($n * $i) . "</td></tr>";
+    echo "<table border='1' style='color:{$_POST['c']};'>";
+    for ($i = 0; $i <= $_POST['t']; $i++) {
+        echo "<tr><td>{$_POST['n']} x $i = " . ($_POST['n'] * $i) . "</td></tr>";
     }
     echo "</table>";
 }

@@ -1,11 +1,10 @@
 <?php
-function realizarOperacion($n1, $n2, $op) {
+function operar($n1, $n2, $op) {
     switch ($op) {
         case 'suma': return $n1 + $n2;
         case 'resta': return $n1 - $n2;
-        case 'multiplicacion': return $n1 * $n2;
-        case 'division': return ($n2 != 0) ? $n1 / $n2 : "Error: División por cero";
-        default: return "Operación no válida";
+        case 'mult': return $n1 * $n2;
+        case 'div': return ($n2 != 0) ? $n1 / $n2 : "Error";
     }
 }
 ?>
@@ -14,21 +13,20 @@ function realizarOperacion($n1, $n2, $op) {
     <select name="op">
         <option value="suma">Suma</option>
         <option value="resta">Resta</option>
-        <option value="multiplicacion">Multiplicación</option>
-        <option value="division">División</option>
+        <option value="mult">Multiplicación</option>
+        <option value="div">División</option>
     </select>
     <input type="number" name="n2" required>
     <button type="submit">Calcular</button>
 </form>
-
 <?php
 if ($_POST) {
-    $res = realizarOperacion($_POST['n1'], $_POST['n2'], $_POST['op']);
-    echo "<h3>Resultado:</h3><ul>
-            <li>Primer número: {$_POST['n1']}</li>
-            <li>Segundo número: {$_POST['n2']}</li>
+    $res = operar($_POST['n1'], $_POST['n2'], $_POST['op']);
+    echo "<ul>
+            <li>Número 1: {$_POST['n1']}</li>
+            <li>Número 2: {$_POST['n2']}</li>
             <li>Operación: {$_POST['op']}</li>
-            <li><strong>Total: $res</strong></li>
+            <li>Resultado: $res</li>
           </ul>";
 }
 ?>

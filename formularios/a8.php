@@ -1,16 +1,11 @@
 <?php
-$hash_guardado = md5("secreto123"); // Password "almacenada"
-
+$db = md5("admin123");
 if ($_POST) {
-    $pass_user = md5($_POST['pass']);
-    if ($pass_user === $hash_guardado) {
-        echo "¡Contraseña correcta! Bienvenida concedida.";
-    } else {
-        echo "Contraseña incorrecta.";
-    }
+    if (md5($_POST['p']) === $db) echo "Bienvenido";
+    else echo "Error";
 }
 ?>
 <form method="post">
-    Contraseña: <input type="password" name="pass">
-    <button type="submit">Validar</button>
+    Pass: <input type="password" name="p">
+    <button type="submit">Entrar</button>
 </form>
