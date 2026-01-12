@@ -3,7 +3,7 @@ $v = isset($_COOKIE['v']) ? $_COOKIE['v'] : 0;
 if (isset($_POST['c'])) {
     $v++;
     setcookie('v', $v, time() + 86400);
-    header("Location: actividad6.php");
+    header("Location: a6.php");
     exit;
 }
 ?>
