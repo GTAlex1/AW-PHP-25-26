@@ -8,5 +8,3 @@
     echo presentacion("Kazus");
     echo PHP_EOL;
 ?>
-
-
