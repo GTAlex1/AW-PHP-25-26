@@ -17,9 +17,10 @@ function mostrarPresentación($nombre, $curso, $modulo, $repeticion) {
                 <td> <?php echo $curso; ?></td>
                 <td> <?php echo $modulo; ?></td>
             </tr>
-        </table> <?php endfor
+        </table> <?php 
+    }
 }
 ?>
-<?php mostrarPresentación(Alejandro, 2SMR, APWEB, 2);?>
+<?php mostrarPresentación("Alejandro", "2SMR", "APWEB", 2);?>
 </body>
 </html>
