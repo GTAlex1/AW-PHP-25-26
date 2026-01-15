@@ -20,9 +20,8 @@
 <body>
     <?php 
     if(isset($_POST['enviar'])) {
-        tablas($_POST['n'], $_POST['tope'])
-    }
-        else : ?>
+        tablas($_POST['n'], $_POST['tope']);
+    } else : ?>
     <form method="post">
         <p>Número: </p><input type="number" name="n" required>
         <p>Límite: </p><input type="number" name="tope" required>
