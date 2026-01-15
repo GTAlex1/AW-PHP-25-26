@@ -21,15 +21,17 @@
         tablas($_POST['n'], $_POST['tope'], $_POST['color']);
     } else { ?>
     <form method="post">
-        <p>Número: </p><input type="number" name="n" required>
-        <p>Límite: </p><input type="number" name="tope" required>
-        <select name="color" required>
-            <option value="red">Rojo</option>
-            <option value="green">Verde</option>
-            <option value="blue">Azul</option>
-        </select>
-        <button type="submit" name="enviar">Enviar</button>
+        <p>Número: <input type="number" name="n" required></p>
+        <p>Límite: <input type="number" name="tope" required></p>
+        <p>
+            <select name="color" required>
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+                <option value="blue">Azul</option>
+            </select>
+            <button type="submit" name="enviar">Enviar</button>
+        </p>
     </form>
     <?php } ?>
 </body>
-</html> 
+</html>
