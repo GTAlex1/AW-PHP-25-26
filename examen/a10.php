@@ -25,6 +25,7 @@
         <p>Límite: <input type="number" name="tope" required></p>
         <p>
             <select name="color" required>
+                <option value="black">Negro</option>
                 <option value="red">Rojo</option>
                 <option value="green">Verde</option>
                 <option value="blue">Azul</option>
