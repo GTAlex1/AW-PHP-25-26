@@ -19,5 +19,5 @@ function clasificarNotas($nota1, $nota2, $nota3) {
     }
 }
 $aprobado = clasificarNotas($nota1, $nota2, $nota3); 
-echo "El estado de la nota es $aprobado";
+echo "El estado de la nota es $aprobado"; 
 ?>
